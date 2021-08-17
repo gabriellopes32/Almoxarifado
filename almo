@@ -20,21 +20,46 @@ public class Almoxarifado {
             opcao2 = tecchines.nextInt();   
             tecchines = new Scanner(System.in);
         
-            if(opcao2 == 1){   
+            switch(opcao2){
+
+            case 1:{
                String nomeEmpresa;
                System.out.println("Digite o nome da empresa: "); 
-               nomeEmpresa = tecchines.nextLine;
+               nomeEmpresa = tecchines.nextLine();
+               cliente.setNome(nomeEmpresa);
                System.out.println("Digite o CPNJ da empresa: ");
-               cpnjEmpresa = tecchines.nextInt;
+               cpnjEmpresa = tecchines.nextInt();
+               cliente.setCNPJ(cnpjEmpresa);
                System.out.println("Digite o endereço da empresa: ");
-               enderecoEmpresa = tecchines.nextLine;
+               enderecoEmpresa = tecchines.nextLine();
+               cliente.setEndereco(enderecoEmpresa);
                System.out.println("Digite o telefone da empresa: ");
-               telefoneEmpresa = tecchines.nextInt;
-                
+               telefoneEmpresa = tecchines.nextInt();
+               cliente.setTelefone(telefoneEmpresa);                
+               }
+               break;
+            case 2:{
+               int verificaUPC;
+               int verificaQuantidade;
                
+               System.out.println("Insira o cnpj da sua empresa: ");
+               verificaCNPJ = tecchines.nextInt;
                
-                
+               if(verificaCNPJ == get.cnpjEmpresa (1)){
+                    System.out.println("Insira o UPC do item que deseja buscar: ");
+                    verificaUPC = tecchines.nextInt();
+                    System.out.println("Insira a quantidade do item que deseja buscar: ");
+                    verificaQuantidade = tecchines.nextInt();
+                    if(verificaUPC == get.
+
+
+
+               }
             }
+
+            }
+
+            
             
             
             
