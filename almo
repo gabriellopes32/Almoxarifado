@@ -1,0 +1,47 @@
+
+package almoxarifado;
+
+import java.util.Scanner;
+
+public class Almoxarifado {
+
+    public static void main(String[] args) {
+        int opcao = 0;
+        
+        
+        
+        
+        
+        do{
+            int opcao2 = 0;
+            Scanner tecchines = new Scanner(System.in);
+            System.out.println("BEM VINDOS AO ALMOXARIFADO S!");
+            System.out.println("ESCOLHA UMA OPÇÃO:\n1 - Cadastrar Empresa\n2 - Buscar itens\n3 - Verificar estoque\n4 - Sair");
+            opcao2 = tecchines.nextInt();   
+            tecchines = new Scanner(System.in);
+        
+            if(opcao2 == 1){   
+               String nomeEmpresa;
+               System.out.println("Digite o nome da empresa: "); 
+               nomeEmpresa = tecchines.nextLine;
+               System.out.println("Digite o CPNJ da empresa: ");
+               cpnjEmpresa = tecchines.nextInt;
+               System.out.println("Digite o endereço da empresa: ");
+               enderecoEmpresa = tecchines.nextLine;
+               System.out.println("Digite o telefone da empresa: ");
+               telefoneEmpresa = tecchines.nextInt;
+                
+               
+               
+                
+            }
+            
+            
+            
+            
+        
+        }while(5!=opcao);
+        
+    }
+    
+}
