@@ -15,44 +15,118 @@ public class Almoxarifado {
         cliente.setTelefoneEmpresa(telefoneEmpresa);
     }
     
-    public static void inserirItem(Item item, int UPC, int quantidade, String nomeControle, String nomeTelefone, String nomePCB, String nomeBota, String nomeOculos, String nomeColete, String nomeLivro, String nomeEsmalte, String nomeRimel, String nomePerfume, String nomeCamisinha, String nomeCigarro, String nomeAlcool){
-        item.setUPC(UPC);
-        item.setQuantidade(quantidade);
-        item.setNomeControle(nomeControle);
-        item.setNomeTelefone(nomeTelefone);
-        item.setNomePCB(nomePCB);
-        item.setNomeBota(nomeBota);
-        item.setNomeOculos(nomeOculos);
-        item.setNomeColete(nomeColete);
-        item.setNomeLivro(nomeLivro);
-        item.setNomeEsmalte(nomeEsmalte);
-        item.setNomeRimel(nomeRimel);
-        item.setNomePerfume(nomePerfume);
-        item.setNomeCamisinha(nomeCamisinha);
-        item.setNomeCigarro(nomeCigarro); 
-        item.setNomeAlcool(nomeAlcool); 
+    public static void inserirItem(Corredor1 corredor1, int UPC, int quantidade, String nomeControle, String nomeTelefone, String nomePCB, String nomeBota, String nomeOculos, String nomeColete, String nomeLivro, String nomeEsmalte, String nomeRimel, String nomePerfume, String nomeCamisinha, String nomeCigarro, String nomeAlcool, int Baia){
+        corredor1.setUPC(UPC);
+        corredor1.setQuantidade(quantidade);
+        corredor1.setNomeControle(nomeControle);
+        corredor1.setNomeTelefone(nomeTelefone);
+        corredor1.setNomePCB(nomePCB);
+        corredor1.setNomeBota(nomeBota);
+        corredor1.setNomeOculos(nomeOculos);
+        corredor1.setNomeColete(nomeColete);
+        corredor1.setNomeLivro(nomeLivro);
+        corredor1.setNomeEsmalte(nomeEsmalte);
+        corredor1.setNomeRimel(nomeRimel);
+        corredor1.setNomePerfume(nomePerfume);
+        corredor1.setNomeCamisinha(nomeCamisinha);
+        corredor1.setNomeCigarro(nomeCigarro); 
+        corredor1.setNomeAlcool(nomeAlcool); 
+        corredor1.setBaia(Baia); //receptáculos
     }
-    
+
+     public static void inserirItem(Corredor2 corredor2, int UPC, int quantidade, String nomeControle, String nomeTelefone, String nomePCB, String nomeBota, String nomeOculos, String nomeColete, String nomeLivro, String nomeEsmalte, String nomeRimel, String nomePerfume, String nomeCamisinha, String nomeCigarro, String nomeAlcool){
+        corredor2.setUPC(UPC);
+        corredor2.setQuantidade(quantidade);
+        corredor2.setNomeControle(nomeControle);
+        corredor2.setNomeTelefone(nomeTelefone);
+        corredor2.setNomePCB(nomePCB);
+        corredor2.setNomeBota(nomeBota);
+        corredor2.setNomeOculos(nomeOculos);
+        corredor2.setNomeColete(nomeColete);
+        corredor2.setNomeLivro(nomeLivro);
+        corredor2.setNomeEsmalte(nomeEsmalte);
+        corredor2.setNomeRimel(nomeRimel);
+        corredor2.setNomePerfume(nomePerfume);
+        corredor2.setNomeCamisinha(nomeCamisinha);
+        corredor2.setNomeCigarro(nomeCigarro); 
+        corredor2.setNomeAlcool(nomeAlcool);
+        corredor2.setBaia(Baia); //receptáculos 
+    }
+
+    public static void inserirItem(Corredor3 corredor3, int UPC, int quantidade, String nomeControle, String nomeTelefone, String nomePCB, String nomeBota, String nomeOculos, String nomeColete, String nomeLivro, String nomeEsmalte, String nomeRimel, String nomePerfume, String nomeCamisinha, String nomeCigarro, String nomeAlcool){
+        corredor3.setUPC(UPC);
+        corredor3.setQuantidade(quantidade);
+        corredor3.setNomeControle(nomeControle);
+        corredor3.setNomeTelefone(nomeTelefone);
+        corredor3.setNomePCB(nomePCB);
+        corredor3.setNomeBota(nomeBota);
+        corredor3.setNomeOculos(nomeOculos);
+        corredor3.setNomeColete(nomeColete);
+        corredor3.setNomeLivro(nomeLivro);
+        corredor3.setNomeEsmalte(nomeEsmalte);
+        corredor3.setNomeRimel(nomeRimel);
+        corredor3.setNomePerfume(nomePerfume);
+        corredor3.setNomeCamisinha(nomeCamisinha);
+        corredor3.setNomeCigarro(nomeCigarro); 
+        corredor3.setNomeAlcool(nomeAlcool);
+        corredor3.setBaia(Baia); //receptáculos
+    }
+
     public static void main(String[] args) {
         int opcao = 0;
         
         Cliente listcliente[];
         listcliente = new Cliente[3];
         
-        Item listitem[];
-        listitem = new Item[15];
+        Corredor1 listcorredor1[];
+        listcorredor1 = new Corredor1[16];
+
+        Corredor2 listcorredor2[];
+        listcorredor2 = new Corredor2[16];
+
+        Corredor3 listcorredor3[];
+        listcorredor3 = new Corredor3[16];
         
-        listitem[0].setNomeControle("Controle Universal - UPC = 111");
-        listitem[0].setUPC(111);
-        listitem[0].setQuantidade(25);
+        listcorredor1[0].setNomeControle("Controle Universal - UPC 111");
+        listcorredor1[0].setUPC(111);
+        listcorredor1[0].setQuantidade(25);
+        listcorredor1[0].setBaia(1);
         
-        listitem[1].setNomeControle("Controle Smart - UPC = 112");
-        listitem[1].setUPC(112);
-        listitem[1].setQuantidade(20);
+        listcorredor1[1].setNomeTelefone("Telefone sem Fio - UPC 112");
+        listcorredor1[1].setUPC(112);
+        listcorredor1[1].setQuantidade(45);
+        listcorredor1[1].setBaia(1);
+
+        listcorredor1[2].setNomePCB("Placa Mãe Asus x3302 - UPC 113");
+        listcorredor1[2].setUPC(113);
+        listcorredor1[2].setQuantidade(15);
+        listcorredor1[2].setBaia(1);
         
-        listitem[2].setNomeControle("Controle XBOX - UPC = 113");
-        listitem[2].setUPC(113);
-        listitem[2].setQuantidade(15);
+        listcorredor1[3].setNomeBota("Bota Coturno tds/ tamanhos - UPC 121");
+        listcorredor1[3].setUPC(121);
+        listcorredor1[3].setQuantidade(45);
+        listcorredor1[3].setBaia(2);
+
+        listcorredor1[4].setNomeOculos("Óculos escuros segurança p/ trabalho - UPC 122");
+        listcorredor1[4].setUPC(122);
+        listcorredor1[4].setQuantidade(45);
+        listcorredor1[4].setBaia(2);
+
+        listcorredor1[5].setNomeColete("Colete de proteção usina - UPC 123");
+        listcorredor1[5].setUPC(123);
+        listcorredor1[5].setQuantidade(45);
+        listcorredor1[5].setBaia(2);
+
+        listcorredor1[6].setNomeLivro("Fios de Prata - Raphael Draccon 352 páginas - UPC 131);
+        listcorredor1[6].setUPC(131);
+        listcorredor1[6].setQuantidade(350);
+        listcorredor1[6].setBaia(3);
+
+        listcorredor1[7].setNomeEsmalte("Caixa de Esmalte várias Cores - 8 u - UPC 141");
+        listcorredor1[7].setUPC(141);
+        listcorredor1[7].setQuantidade(25);
+        listcorredor1[7].setBaia(4);
+        
         
         
             do{
@@ -93,7 +167,7 @@ public class Almoxarifado {
                int verificaQuantidade;
                int verificaCNPJ;
                
-               System.out.println("Insira o cnpj da sua empresa: ");
+               System.out.println("Insira o CNPJ da sua empresa: ");
                verificaCNPJ = tecchines.nextInt();
         
                
