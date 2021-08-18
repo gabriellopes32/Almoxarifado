@@ -1,18 +1,61 @@
 
 package almoxarifado;
 
+import classes.Cliente;
+import classes.Item;
 import java.util.Scanner;
+
 
 public class Almoxarifado {
 
+    public static void inserirCliente(Cliente cliente, String nomeEmpresa, int cnpjEmpresa, String enderecoEmpresa, int telefoneEmpresa){
+        cliente.setNomeEmpresa(nomeEmpresa);
+        cliente.setCnpjEmpresa(cnpjEmpresa);
+        cliente.setEnderecoEmpresa(enderecoEmpresa);
+        cliente.setTelefoneEmpresa(telefoneEmpresa);
+    }
+    
+    public static void inserirItem(Item item, int UPC, int quantidade, String nomeControle, String nomeTelefone, String nomePCB, String nomeBota, String nomeOculos, String nomeColete, String nomeLivro, String nomeEsmalte, String nomeRimel, String nomePerfume, String nomeCamisinha, String nomeCigarro, String nomeAlcool){
+        item.setUPC(UPC);
+        item.setQuantidade(quantidade);
+        item.setNomeControle(nomeControle);
+        item.setNomeTelefone(nomeTelefone);
+        item.setNomePCB(nomePCB);
+        item.setNomeBota(nomeBota);
+        item.setNomeOculos(nomeOculos);
+        item.setNomeColete(nomeColete);
+        item.setNomeLivro(nomeLivro);
+        item.setNomeEsmalte(nomeEsmalte);
+        item.setNomeRimel(nomeRimel);
+        item.setNomePerfume(nomePerfume);
+        item.setNomeCamisinha(nomeCamisinha);
+        item.setNomeCigarro(nomeCigarro); 
+        item.setNomeAlcool(nomeAlcool); 
+    }
+    
     public static void main(String[] args) {
         int opcao = 0;
         
+        Cliente listcliente[];
+        listcliente = new Cliente[3];
+        
+        Item listitem[];
+        listitem = new Item[15];
+        
+        listitem[0].setNomeControle("Controle Universal - UPC = 111");
+        listitem[0].setUPC(111);
+        listitem[0].setQuantidade(25);
+        
+        listitem[1].setNomeControle("Controle Smart - UPC = 112");
+        listitem[1].setUPC(112);
+        listitem[1].setQuantidade(20);
+        
+        listitem[2].setNomeControle("Controle XBOX - UPC = 113");
+        listitem[2].setUPC(113);
+        listitem[2].setQuantidade(15);
         
         
-        
-        
-        do{
+            do{
             int opcao2 = 0;
             Scanner tecchines = new Scanner(System.in);
             System.out.println("BEM VINDOS AO ALMOXARIFADO S!");
@@ -23,29 +66,38 @@ public class Almoxarifado {
             switch(opcao2){
 
             case 1:{
-               String nomeEmpresa;
-               System.out.println("Digite o nome da empresa: "); 
-               nomeEmpresa = tecchines.nextLine();
-               cliente.setNome(nomeEmpresa);
-               System.out.println("Digite o CPNJ da empresa: ");
-               cpnjEmpresa = tecchines.nextInt();
-               cliente.setCNPJ(cnpjEmpresa);
-               System.out.println("Digite o endereço da empresa: ");
-               enderecoEmpresa = tecchines.nextLine();
-               cliente.setEndereco(enderecoEmpresa);
-               System.out.println("Digite o telefone da empresa: ");
-               telefoneEmpresa = tecchines.nextInt();
-               cliente.setTelefone(telefoneEmpresa);                
+               int y = 0;
+               String nomeEmpre;
+               int cnpjEmpre;
+               String enderecoEmpre;
+               int telefoneEmpre;
+                do{
+                    System.out.println("Digite o nome da empresa: "); 
+                    nomeEmpre = tecchines.nextLine();
+                    listcliente[y].setNomeEmpresa(nomeEmpre);
+                    System.out.println("Digite o CPNJ da empresa: ");
+                    cnpjEmpre = tecchines.nextInt();
+                    listcliente[y].setCnpjEmpresa(cnpjEmpre);
+                    System.out.println("Digite o endereço da empresa: ");
+                    enderecoEmpre = tecchines.nextLine();
+                    listcliente[y].setEnderecoEmpresa(enderecoEmpre);
+                    System.out.println("Digite o telefone da empresa: ");
+                    telefoneEmpre = tecchines.nextInt();
+                    listcliente[y].setTelefoneEmpresa(telefoneEmpre);                
+                    y++;
+                }while(y<3);
                }
                break;
             case 2:{
                int verificaUPC;
                int verificaQuantidade;
+               int verificaCNPJ;
                
                System.out.println("Insira o cnpj da sua empresa: ");
-               verificaCNPJ = tecchines.nextInt;
+               verificaCNPJ = tecchines.nextInt();
+        
                
-               if(verificaCNPJ == get.cnpjEmpresa (1)){
+               if(verificaCNPJ == listcliente[verificaCNPJ].getCnpjEmpresa()){
                     System.out.println("Insira o UPC do item que deseja buscar: ");
                     verificaUPC = tecchines.nextInt();
                     System.out.println("Insira a quantidade do item que deseja buscar: ");
