@@ -127,8 +127,31 @@ public class Almoxarifado {
         listcorredor1[7].setQuantidade(25);
         listcorredor1[7].setBaia(4);
         
+        listcorredor1[8].setNomeRimel("Rimel preto 25 ml - UPC 142");
+        listcorredor1[8].setUPC(142);
+        listcorredor1[8].setQuantidade(40);
+        listcorredor1[8].setBaia(4);
+
+        listcorredor1[9].setNomePerfume("Paco rabanne one million 40ml - UPC 143");
+        listcorredor1[9].setUPC(143);
+        listcorredor1[9].setQuantidade(20);
+        listcorredor1[9].setBaia(4);
         
+        listcorredor1[10].setNomeCamisinha("Ultra fina de menta média - 151");
+        listcorredor1[10].setUPC(151);
+        listcorredor1[10].setQuantidade(50);
+        listcorredor1[10].setBaia(5);
         
+        listcorredor1[10].setNomeCigarro("Malboro caixa c/12 - 152");
+        listcorredor1[10].setUPC(152);
+        listcorredor1[10].setQuantidade(75);
+        listcorredor1[10].setBaia(5);
+        
+        listcorredor1[10].setNomeAlcool("Alcool em gel 1 litro - 153");
+        listcorredor1[10].setUPC(153);
+        listcorredor1[10].setQuantidade(60);
+        listcorredor1[10].setBaia(5);
+
             do{
             int opcao2 = 0;
             Scanner tecchines = new Scanner(System.in);
